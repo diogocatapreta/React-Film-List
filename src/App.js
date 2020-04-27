@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./styles.css";
 import BookList from "./component/BookList";
+import BookForm from "./component/BookForm";
 
 class App extends Component {
   removerAutor = indiceSelecionado => {
@@ -51,6 +52,7 @@ class App extends Component {
           autores={this.state.autores}
           removerAutor={this.removerAutor}
         />
+        <BookForm />
       </div>
     );
   }
