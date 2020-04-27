@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "materialize-css/dist/css/materialize.min.css";
 import BookList from "./component/BookList";
 import BookForm from "./component/BookForm";
+import HeaderMenu from "./component/HeaderMenu";
 
 class App extends Component {
   removerAutor = indiceSelecionado => {
@@ -53,7 +54,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>BookList</h1>
+        <HeaderMenu />
         <BookList
           autores={this.state.autores}
           removerAutor={this.removerAutor}
