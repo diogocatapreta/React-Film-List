@@ -37,7 +37,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>BookList</h1>
-        <BookList />
+        <BookList autores={this.state.autores} />
       </div>
     );
   }
