@@ -59,7 +59,11 @@ class BookForm extends Component {
           onChange={this.escutadorDeInput}
         />
 
-        <button type="button" onClick={this.salvarLivro}>
+        <button
+          type="button"
+          className="btn waves-effect waves-light indigo"
+          onClick={this.salvarLivro}
+        >
           Salvar
         </button>
       </form>

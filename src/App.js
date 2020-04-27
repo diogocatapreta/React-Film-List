@@ -55,11 +55,15 @@ class App extends Component {
     return (
       <div className="App">
         <HeaderMenu />
-        <BookList
-          autores={this.state.autores}
-          removerAutor={this.removerAutor}
-        />
-        <BookForm salvarAutor={this.salvarAutor} />
+        <div className="container">
+          <BookList
+            autores={this.state.autores}
+            removerAutor={this.removerAutor}
+          />
+        </div>
+        <div className="container ">
+          <BookForm salvarAutor={this.salvarAutor} />
+        </div>
       </div>
     );
   }

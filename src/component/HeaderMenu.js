@@ -3,19 +3,16 @@ import React from "react";
 const HeaderMenu = () => {
   return (
     <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">
+      <div class="nav-wrapper indigo">
+        <a href="/" class="brand-logo">
           Book Manager
         </a>
         <ul class="right">
           <li>
-            <a href="#">List</a>
+            <a href="/List">List</a>
           </li>
           <li>
-            <a href="#">Create</a>
-          </li>
-          <li>
-            <a href="#">sass</a>
+            <a href="/create">Create</a>
           </li>
         </ul>
       </div>
