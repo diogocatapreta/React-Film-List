@@ -3,6 +3,16 @@ import "./styles.css";
 import BookList from "./component/BookList";
 
 class App extends Component {
+  removerAutor = indiceSelecionado => {
+    const { autores } = this.state;
+
+    this.setState({
+      autores: autores.filter((autor, atual) => {
+        return atual !== indiceSelecionado;
+      })
+    });
+  };
+
   state = {
     autores: [
       {
@@ -37,7 +47,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1>BookList</h1>
-        <BookList autores={this.state.autores} />
+        <BookList
+          autores={this.state.autores}
+          removerAutor={this.removerAutor}
+        />
       </div>
     );
   }
