@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./styles.css";
+import "materialize-css/dist/css/materialize.min.css";
 import BookList from "./component/BookList";
 import BookForm from "./component/BookForm";
 
@@ -11,6 +11,12 @@ class App extends Component {
       autores: autores.filter((autor, atual) => {
         return atual !== indiceSelecionado;
       })
+    });
+  };
+
+  salvarAutor = autor => {
+    this.setState({
+      autores: [...this.state.autores, autor]
     });
   };
 
@@ -52,7 +58,7 @@ class App extends Component {
           autores={this.state.autores}
           removerAutor={this.removerAutor}
         />
-        <BookForm />
+        <BookForm salvarAutor={this.salvarAutor} />
       </div>
     );
   }
